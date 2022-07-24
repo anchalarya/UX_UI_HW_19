@@ -1,0 +1,258 @@
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100px;
+  background-color: black;
+}
+
+
+.nav .left {
+  align-items: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav .left .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  height: 75px;
+  width: 100px;
+  background: url('../images/logo-smaller.jpg') no-repeat;
+  background-size: 100%;
+}
+
+.nav .right {
+  flex-direction: row;
+  align-items: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+
+}
+
+.nav .right a {
+  padding-left: 1rem;
+  color: white;
+  text-align: center;
+  padding: 24px 26px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav .right a.current {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.nav .right a:hover {
+  background-color: white;
+  color: black;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  height: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-small;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.content {
+  background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('../images/bg.jpeg') no-repeat;
+  background-size: 100%;
+}
+
+.content .content-left {
+  margin: 10rem;
+}
+
+.info-btn {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-link{
+
+  color: white;
+  text-decoration: none;
+  
+}
+
+footer .right {
+  margin-right: 2rem; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .right .behance {
+  background: url('../images/behance.png') no-repeat;
+  background-size: 100%;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+
+footer .right .linkedin {
+  background: url('../images/linkedin.jpeg') no-repeat;
+  background-size: 100%;
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+}
+
+
+/* ----------@@ WORK.HTML @@--------------- */
+
+.work-tabs > input,
+.work-tabs section > div {
+  display: none;
+}
+
+
+#graphic-design-tab:checked ~ section .graphic-design-tab,
+#ui-design-tab:checked ~ section .ui-design-tab,
+#ux-design-tab:checked ~ section .ux-design-tab {
+  display: block;
+}
+
+#graphic-design-tab:checked ~ div .graphic-design-tab,
+#ui-design-tab:checked ~ div .ui-design-tab,
+#ux-design-tab:checked ~ div .ux-design-tab {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.work-tabs {
+  width: 100%;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.work-tabs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 15px auto;
+}
+
+
+.work-tabs ul li label {
+  margin-top: 15px;
+  padding: 15px 25px;
+  /* border: 1px solid #ddd; */
+  border-bottom: 0;
+  /* background: #eee; */
+  color: #444;
+}
+
+.work-tabs ul li label:hover {
+  background: #ddd;
+}
+
+.work-tabs ul li label:active {
+  background: #fff;
+}
+
+.work-tabs ul li:not(:last-child) label {
+  border-right-width: 0;
+}
+
+.work-tabs section {
+  clear: both;
+}
+
+.work-tabs section > div {
+  /* padding: 20px; */
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+  line-height: 1.5em;
+  letter-spacing: 0.3px;
+  color: #444;
+}
+
+.work-tabs section div h2 {
+  margin: 0;
+  letter-spacing: 1px;
+  color: #34495e;
+}
+
+.work-tabs img {
+  height: 300px;
+  /* width: 400px; */
+}
+
+.ui-design-item-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.ui-design-tab {
+  margin: auto 2rem;
+}
+
+.ui-design-right-content {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .ui-design-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .ui-design-right-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    margin-right: 5rem;
+  }
+}
